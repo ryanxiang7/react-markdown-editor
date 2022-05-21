@@ -345,8 +345,8 @@ export default function Editor(props: {
 	}
 
 	getMDVal = () => editorState.contentMD;
-  getHTMLVal = () => editorState.contentHTML;
-  
+	getHTMLVal = () => editorState.contentHTML;
+
 	return (
 		<div
 			className={`my-5 mx-auto min-w-0 min-h-0 leading-5 rounded-lg flex flex-col`}

@@ -12,7 +12,15 @@ export default defineConfig({
 			fileName: (format) => `react-markdown-editor.${format}.js`,
 		},
 		rollupOptions: {
-			external: ['react'],
+			external: [
+				'react',
+				'react-dom',
+				'markdown-it',
+				'markdown-it-emoji',
+				'markdown-it-underline',
+				'dompurify',
+				'highlight.js',
+			],
 		},
 	},
 });
