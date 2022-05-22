@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Editor, { BTNTYPE } from '@ryanxiang/react-markdown-editor';
+import '@ryanxiang/react-markdown-editor/dist/style.css';
 function App() {
 	let prop = {
 		editorStyle: {

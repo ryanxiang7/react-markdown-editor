@@ -1,12 +1,31 @@
 module.exports = {
 	mdoe: 'jit',
-	// purge: {
-	// 	enabled: true,
-	// 	content: ['./src/**/*.html', './src/**/*.jsx', './src/**/*.tsx'],
-	// },
 	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			backgroundImage: {
+				quote: "url('./src/style/icons/double-quotes-l.svg')",
+				h1: "url('./src/style/icons/h-1.svg')",
+				h2: "url('./src/style/icons/h-2.svg')",
+				h3: "url('./src/style/icons/h-3.svg')",
+				bold: "url('./src/style/icons/bold.svg')",
+				italic: "url('./src/style/icons/italic.svg')",
+				underLine: "url('./src/style/icons/underline.svg')",
+				inlineCode: "url('./src/style/icons/code-view.svg')",
+				codeBlock: "url('./src/style/icons/code-block.svg')",
+				link: "url('./src/style/icons/link.svg')",
+				delete: "url('./src/style/icons/delete-line.svg')",
+				image: "url('./src/style/icons/image.svg')",
+				orderedList: "url('./src/style/icons/list-ordered.svg')",
+				unorderedList: "url('./src/style/icons/list-unordered.svg')",
+				newLine: "url('./src/style/icons/multi-line-text.svg')",
+				minimize: "url('./src/style/icons/minimize.svg')",
+				maximize: "url('./src/style/icons/maximize.svg')",
+				table: "url('./src/style/icons/table.svg')",
+				edit: "url('./src/style/icons/edit.svg')",
+				preview: "url('./src/style/icons/preview.svg')",
+				sync: "url('./src/style/icons/sync.svg')",
+			},
 			fontFamily: {
 				default: 'system-ui,-apple-system,BlinkMacSystemFont,".SFNSText-Regular",sans-serif;',
 			},

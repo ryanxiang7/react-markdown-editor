@@ -65,7 +65,7 @@ export function TableBtn(props: IEditorChildProps & { insertTable: Function }) {
 			onMouseOut={(e: React.MouseEvent) => {
 				handleMouseOut(e);
 			}}>
-			<i className={`icon-format  opacity-60 icon-table hover: 'opacity-100'`}></i>
+			<i className={`icon-format  opacity-60 bg-table hover: 'opacity-100'`}></i>
 			<ul
 				ref={list}
 				className='absolute left-0 top-[36px] rounded-md list-none bg-white border box-content py-2'

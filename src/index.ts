@@ -1,8 +1,7 @@
 import Editor, { getMDVal, getHTMLVal } from './editor';
 import { use, unuse, BTNTYPE } from './utils/var';
 import { IEditorProps } from './types';
-import './style/index.css';
-import './style/icons.css';
+import './style/main.css';
 
 export function getEditorConfig(): IEditorProps {
 	return {

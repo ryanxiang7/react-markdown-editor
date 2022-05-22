@@ -1,8 +1,11 @@
-import { build, defineConfig } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import requireTransform from 'vite-plugin-require-transform';
+import postcss from 'rollup-plugin-postcss';
+import postcssImport from 'postcss-import';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 const path = require('path');
-// https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [requireTransform({}), react()],
 	build: {
@@ -21,6 +24,14 @@ export default defineConfig({
 				'dompurify',
 				'highlight.js',
 			],
+			// plugins: [
+			// 	postcss({
+			// 		extensions: ['.css'],
+			// 		extract: true,
+			// 		sourceMap: true,
+			// 		plugins: [postcssImport(), tailwindcss(), autoprefixer()],
+			// 	}),
+			// ],
 		},
 	},
 });
