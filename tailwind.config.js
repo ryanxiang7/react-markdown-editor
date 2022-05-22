@@ -1,6 +1,29 @@
 module.exports = {
 	mdoe: 'jit',
 	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+	safelist: [
+		'bg-quote',
+		'bg-h1',
+		'bg-h2',
+		'bg-h3',
+		'bg-bold',
+		'bg-italic',
+		'bg-underLine',
+		'bg-inlineCode',
+		'bg-codeBlock',
+		'bg-link',
+		'bg-delete',
+		'bg-image',
+		'bg-orderedList',
+		'bg-unorderedList',
+		'bg-newLine',
+		'bg-minimize',
+		'bg-maximize',
+		'bg-table',
+		'bg-edit',
+		'bg-preview',
+		'bg-sync',
+	],
 	theme: {
 		extend: {
 			backgroundImage: {
