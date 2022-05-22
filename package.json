@@ -10,7 +10,8 @@
     "react-compnent"
   ],
   "files": [
-    "dist"
+    "dist",
+    "dist/*.css"
   ],
   "main": "./dist/react-markdown-editor.es.js",
   "module": "./dist/react-markdown-editor.es.js",
@@ -31,7 +32,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ryanxiang/react-markdown-editor": "^0.0.0",
+    "@ryanxiang/react-markdown-editor": "^0.0.4",
     "@types/dompurify": "^2.3.3",
     "@types/lodash": "^4.14.182",
     "@types/markdown-it": "^12.2.3",

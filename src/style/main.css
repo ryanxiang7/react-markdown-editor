@@ -1,7 +1,4 @@
+@import './icon.css';
 @import 'tailwindcss/base';
-@import'tailwindcss/components';
-@import'tailwindcss/utilities';
-
-.icon-format {
-  @apply bg-contain inline-block w-6 h-6 mt-[2px] mx-auto;
-}
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

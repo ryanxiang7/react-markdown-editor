@@ -2,9 +2,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import requireTransform from 'vite-plugin-require-transform';
 import postcss from 'rollup-plugin-postcss';
-import postcssImport from 'postcss-import';
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
+const postcssImport = require('postcss-import');
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 const path = require('path');
 export default defineConfig({
 	plugins: [requireTransform({}), react()],
@@ -15,6 +15,15 @@ export default defineConfig({
 			fileName: (format) => `react-markdown-editor.${format}.js`,
 		},
 		rollupOptions: {
+			plugins: [
+				// postcss({
+				// 	extensions: ['.css'],
+				// 	extract: false,
+				// 	sourceMap: true,
+				// 	plugins: [postcssImport(), tailwindcss(), autoprefixer()],
+				// 	inject: { insertAt: 'top' },
+				// }),
+			],
 			external: [
 				'react',
 				'react-dom',
@@ -24,14 +33,6 @@ export default defineConfig({
 				'dompurify',
 				'highlight.js',
 			],
-			// plugins: [
-			// 	postcss({
-			// 		extensions: ['.css'],
-			// 		extract: true,
-			// 		sourceMap: true,
-			// 		plugins: [postcssImport(), tailwindcss(), autoprefixer()],
-			// 	}),
-			// ],
 		},
 	},
 });
