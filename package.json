@@ -12,8 +12,8 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/react-markdown-editor.umd.js",
-  "module": "./dist/react-markdown-editor.ed.js",
+  "main": "./dist/react-markdown-editor.es.js",
+  "module": "./dist/react-markdown-editor.es.js",
   "exports": {
     ".": {
       "import": "./dist/react-markdown-editor.es.js",
