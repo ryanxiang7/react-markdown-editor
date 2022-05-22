@@ -7,6 +7,11 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 export default defineConfig({
+	css: {
+		postcss: {
+			plugins: [require('postcss-import'), require('tailwindcss'), require('autoprefixer')],
+		},
+	},
 	plugins: [requireTransform({}), react()],
 	build: {
 		lib: {
