@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Editor, { getMDVal, getHTMLVal, use, unuse, getEditorConfig } from '@ryanxiang/react-markdown-editor';
+import Editor, { getMDVal, getHTMLVal, use, unuse, getEditorConfig, BTNTYPE } from '@ryanxiang/react-markdown-editor';
 import MarkdownIt from 'markdown-it';
 import hljs from 'highlight.js';
 import 'markdown-it-emoji';
@@ -61,10 +61,10 @@ function App() {
 		console.log(getHTMLVal());
 	}
 	function unuseBold() {
-		unuse('bold');
+		unuse(BTNTYPE.BOLD);
 	}
 	function useBold() {
-		use('bold');
+		use(BTNTYPE.BOLD);
 	}
 	return (
 		<div className='w-screen h-screen flex flex-col justify-center'>
