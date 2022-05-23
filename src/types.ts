@@ -5,16 +5,7 @@ import { BTNTYPE } from './utils/var';
  * Editor Style
  */
 export interface IEditorStyle {
-	/**
-	 * Editor width.
-	 * default value : 100%
-	 */
-	width?: string;
-	/**
-	 * Editor height.
-	 * default value : 100%
-	 */
-	height?: string;
+	[x: string]: string | number;
 }
 
 /**

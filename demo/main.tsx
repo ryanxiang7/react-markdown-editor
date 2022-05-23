@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Editor, { BTNTYPE, getMDVal, getHTMLVal, use, unuse } from '@ryanxiang/react-markdown-editor';
+import Editor, { getMDVal, getHTMLVal, use, unuse, getEditorConfig } from '@ryanxiang/react-markdown-editor';
 import MarkdownIt from 'markdown-it';
 import hljs from 'highlight.js';
 import 'markdown-it-emoji';
@@ -54,39 +54,6 @@ function renderHtml(markdownStr: string) {
 }
 
 function App() {
-	let prop = {
-		editorStyle: {
-			width: '1200px',
-			height: '600px',
-		},
-		leftButtons: [
-			BTNTYPE.QUOTE,
-			BTNTYPE.H1,
-			BTNTYPE.H2,
-			BTNTYPE.H3,
-			BTNTYPE.BOLD,
-			BTNTYPE.ITALIC,
-			BTNTYPE.DELETE,
-			BTNTYPE.UNDERLINE,
-			BTNTYPE.LINK,
-			BTNTYPE.INLINECODE,
-			BTNTYPE.CODEBLOCK,
-			BTNTYPE.NEWLINE,
-			BTNTYPE.ORDEREDLIST,
-			BTNTYPE.UNORDERLIST,
-			BTNTYPE.IMAGE,
-			BTNTYPE.TABLE,
-		],
-		editorMode: 'sync',
-		markdownClass: 'prose prose-a:text-blue-400 hover:prose-a:opacity-60',
-		previewClass: 'prose prose-a:text-blue-400 hover:prose-a:opacity-60',
-		contentMD: '',
-		contentHTML: '',
-		tableRow: 4,
-		tableCol: 6,
-		imageUrl: 'http://localhost:3001/upload/sayHello',
-	};
-
 	function getMarkdown() {
 		console.log(getMDVal());
 	}
@@ -120,7 +87,7 @@ function App() {
 			</div>
 			<div className='w-full flex-1 box-border'>
 				<Editor
-					editorProps={prop}
+					editorProps={getEditorConfig()}
 					onChange={(a: string, b: string) => {
 						console.log(a, b);
 					}}
