@@ -1,6 +1,6 @@
 module.exports = {
 	mdoe: 'jit',
-	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './demo/**/*.{vue,js,ts,jsx,tsx}'],
 	safelist: [
 		'bg-quote',
 		'bg-h1',

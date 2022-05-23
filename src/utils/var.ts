@@ -56,31 +56,3 @@ export let left: BTNTYPE[] = [
 	BTNTYPE.TABLE,
 ];
 export let right: BTNTYPE[] = [BTNTYPE.SYNC_MODE, BTNTYPE.MAXIMAZE];
-
-/**
- * use 接口
- * @param type BTNTYPE | BTNTYPE[]
- */
-export function use(type: BTNTYPE | BTNTYPE[]) {
-	if (Array.isArray(type)) {
-		left = [...type];
-	} else {
-		left.push(type);
-	}
-}
-
-/**
- * unuse 接口
- * @param type BTNTYPE | BTNTYPE[]
- */
-export function unuse(type: BTNTYPE | BTNTYPE[]) {
-	if (Array.isArray(type)) {
-		left = left.filter((item) => {
-			return type.indexOf(item) !== -1;
-		});
-	} else {
-		left = left.filter((item) => {
-			return item !== type;
-		});
-	}
-}

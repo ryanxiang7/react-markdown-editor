@@ -346,6 +346,39 @@ export default function Editor(props: {
 
 	getMDVal = () => editorState.contentMD;
 	getHTMLVal = () => editorState.contentHTML;
+	unuse = function (plugin: BTNTYPE | BTNTYPE[]) {
+		let arr =
+			editorState.leftButtons?.filter((item) => {
+				if (Array.isArray(plugin)) {
+					if (plugin.indexOf(item) != -1) {
+						return false;
+					} else {
+						return true;
+					}
+				} else {
+					if (item === plugin) {
+						return false;
+					} else {
+						return true;
+					}
+				}
+			}) || [];
+
+		setEditorState((pre) => {
+			return {
+				...pre,
+				leftButtons: [...arr],
+			};
+		});
+	};
+	use = function (plugin: BTNTYPE) {
+		setEditorState((pre) => {
+			return {
+				...pre,
+				leftButtons: [...(pre.leftButtons || []), plugin],
+			};
+		});
+	};
 
 	return (
 		<div
@@ -360,5 +393,10 @@ export default function Editor(props: {
 	);
 }
 
+/**
+ * 导出接口
+ */
 export let getMDVal: Function;
 export let getHTMLVal: Function;
+export let use: Function;
+export let unuse: Function;

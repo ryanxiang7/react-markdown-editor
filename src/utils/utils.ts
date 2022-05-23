@@ -1,7 +1,6 @@
 // import { marked, Renderer } from 'marked';
 import MarkdownIt from 'markdown-it';
 import 'markdown-it-emoji';
-// import hljs from 'highlight.js';
 import DOMPurify from 'dompurify';
 function initMarked() {
 	//  不使用插件

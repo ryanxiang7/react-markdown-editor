@@ -1,5 +1,5 @@
-import Editor, { getMDVal, getHTMLVal } from './editor';
-import { use, unuse, BTNTYPE } from './utils/var';
+import Editor, { getMDVal, getHTMLVal, use, unuse } from './editor';
+import { BTNTYPE } from './utils/var';
 import { IEditorProps } from './types';
 import './style/main.css';
 

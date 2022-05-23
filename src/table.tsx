@@ -57,7 +57,7 @@ export function TableBtn(props: IEditorChildProps & { insertTable: Function }) {
 
 	return (
 		<button
-			className={'relative inline-block w-[36px] h-[36px] rounded-md mr-[2px] hover:bg-gray-300 '}
+			className={'relative flex flex-col justify-center w-[36px] h-[36px] rounded-md mr-[2px] hover:bg-gray-300 '}
 			title='table'
 			onMouseOver={(e: React.MouseEvent) => {
 				handleMouseOver(e);

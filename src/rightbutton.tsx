@@ -8,7 +8,6 @@ export function RightButton(props: EditorRightButtonProps) {
 	function handleBtnClick(e: React.MouseEvent) {
 		let btn: BTNTYPE[] = editorState.rightButtons!;
 		let styleCache = editorState.styleCache;
-		console.log(editorState);
 
 		if (type === BTNTYPE.SYNC_MODE) {
 			btn[0] = BTNTYPE.EDIT_MODE;
