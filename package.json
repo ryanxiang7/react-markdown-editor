@@ -36,9 +36,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "types": "src/index.d.ts",
+  "types": "src/index.ts",
   "dependencies": {
-    "@ryanxiang/react-markdown-editor": "^0.0.18",
+    "@ryanxiang/react-markdown-editor": "^0.0.19",
     "@types/dompurify": "^2.3.3",
     "@types/lodash": "^4.14.182",
     "@types/markdown-it": "^12.2.3",
