@@ -19,16 +19,9 @@ export default defineConfig({
 			name: 'react-markdown-editor',
 			fileName: (format) => `react-markdown-editor.${format}.js`,
 		},
+		sourcemap: true,
 		rollupOptions: {
-			plugins: [
-				// postcss({
-				// 	extensions: ['.css'],
-				// 	extract: false,
-				// 	sourceMap: true,
-				// 	plugins: [postcssImport(), tailwindcss(), autoprefixer()],
-				// 	inject: { insertAt: 'top' },
-				// }),
-			],
+			plugins: [],
 			external: [
 				'react',
 				'react-dom',

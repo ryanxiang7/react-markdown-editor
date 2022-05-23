@@ -1,4 +1,3 @@
-// import { marked, Renderer } from 'marked';
 import MarkdownIt from 'markdown-it';
 import 'markdown-it-emoji';
 import DOMPurify from 'dompurify';
