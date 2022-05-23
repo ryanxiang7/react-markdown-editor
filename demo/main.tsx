@@ -99,7 +99,6 @@ function App() {
 	function useBold() {
 		use('bold');
 	}
-
 	return (
 		<div className='w-screen h-screen flex flex-col justify-center'>
 			<div className='h-16 flex justify-center items-center'>

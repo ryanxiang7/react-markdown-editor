@@ -1,10 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import requireTransform from 'vite-plugin-require-transform';
-import postcss from 'rollup-plugin-postcss';
-const postcssImport = require('postcss-import');
-const tailwindcss = require('tailwindcss');
-const autoprefixer = require('autoprefixer');
 const path = require('path');
 export default defineConfig({
 	css: {
