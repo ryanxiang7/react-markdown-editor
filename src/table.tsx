@@ -53,11 +53,14 @@ export function TableBtn(props: IEditorChildProps & { insertTable: Function }) {
 	}
 	function handleMouseOut(e: React.MouseEvent) {
 		list.current!.style.display = 'none';
+		setTable([]);
 	}
 
 	return (
 		<button
-			className={'relative flex flex-col justify-center w-[36px] h-[36px] rounded-md mr-[2px] hover:bg-gray-300 '}
+			className={
+				'relative inline-block border-0 bg-transparent w-[36px] h-[36px] rounded-md mr-[2px] hover:bg-gray-300 '
+			}
 			title='table'
 			onMouseOver={(e: React.MouseEvent) => {
 				handleMouseOver(e);
@@ -65,10 +68,10 @@ export function TableBtn(props: IEditorChildProps & { insertTable: Function }) {
 			onMouseOut={(e: React.MouseEvent) => {
 				handleMouseOut(e);
 			}}>
-			<i className={`icon-format  opacity-60 bg-table hover: 'opacity-100'`}></i>
+			<i className={`icon-format opacity-60 bg-table hover: 'opacity-100'`}></i>
 			<ul
 				ref={list}
-				className='absolute left-0 top-[36px] rounded-md list-none bg-white border box-content py-2'
+				className='absolute left-0 top-[36px] rounded-md list-none m-0 p-0 bg-white border border-solid border-gray-300 box-content py-2'
 				style={{
 					width: editorState.tableCol! * 32 + 'px',
 					height: editorState.tableRow! * 32 + 'px',

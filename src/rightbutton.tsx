@@ -54,7 +54,9 @@ export function RightButton(props: EditorRightButtonProps) {
 
 	return (
 		<button
-			className={'w-[36px] h-[36px] flex justify-center items-center rounded-md mr-[2px] hover:bg-gray-300 '}
+			className={
+				'w-[36px] h-[36px] border-0 bg-transparent  flex justify-center items-center rounded-md mr-[2px] hover:bg-gray-300 '
+			}
 			onClick={(e: React.MouseEvent) => handleBtnClick(e)}
 			title={title}>
 			<i className={`icon-format  opacity-60 bg-${type} hover: 'opacity-100' `}></i>

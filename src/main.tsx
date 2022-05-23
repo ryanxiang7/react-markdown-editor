@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Editor, { getHTMLVal, getMDVal, unuse, use } from '../src/editor';
+import Editor, { getHTMLVal, getMDVal, unuse, use } from './editor';
 import { BTNTYPE } from '../src/utils/var';
 // import Editor, { BTNTYPE, getMDVal, getHTMLVal, use, unuse } from '@ryanxiang/react-markdown-editor';
-import './index.css';
-// import '@ryanxiang/react-markdown-editor/dist/style.css';
+import './style/main.css';
+// import '@ryanxiang/react-masrkdown-editor/dist/style.css';
 
 function App() {
 	let prop = {

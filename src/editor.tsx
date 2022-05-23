@@ -300,7 +300,7 @@ export default function Editor(props: {
 		let markdown = (
 			<textarea
 				ref={textArea}
-				className={`max-w-none resize-none block border-none bg-white outline-none antialiased flex-1 h-full min-h-[150px] rounded-bl-lg rounded-br-lg p-2 ${editorProps.markdownClass}`}
+				className={`max-w-none resize-none box-border block border-none bg-white outline-none antialiased flex-1 h-full min-h-[150px] rounded-bl-lg rounded-br-lg p-2 ${editorProps.markdownClass}`}
 				onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
 					handleChange(e);
 				}}
@@ -312,7 +312,7 @@ export default function Editor(props: {
 
 		let _html = (
 			<div
-				className={`max-w-none bg-white min-h-[150px] overflow-auto flex-1 h-full p-2 rounded-bl-lg rounded-br-lg ${editorProps.previewClass}`}
+				className={`max-w-none box-border bg-white min-h-[150px] overflow-auto flex-1 h-full p-2 rounded-bl-lg rounded-br-lg ${editorProps.previewClass}`}
 				dangerouslySetInnerHTML={{ __html: editorState.contentHTML }}></div>
 		);
 		if (editorState.editorMode === 'sync') {
@@ -398,7 +398,7 @@ export default function Editor(props: {
 			style={{ ...editorState.editorStyle }}>
 			<Toolbar left={getButtons('left')} right={getButtons('right')} />
 			<div
-				className={`w-full h-full border-gray-200 border-t box-border overflow-hidden flex flex-row divide-x-2 break-all whitespace-normal font-default leading-tight `}>
+				className={`divide-y-0 divide-solid divide-gray-300 w-full h-full border-gray-200 border-t box-border overflow-hidden flex flex-row mt-[-2px] divide-x-[1px] break-all whitespace-normal font-default leading-tight `}>
 				{getContentBox()}
 			</div>
 		</div>
