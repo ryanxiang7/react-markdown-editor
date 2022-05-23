@@ -7,6 +7,41 @@ import Toolbar from './toolbar';
 import { EditorProps, IEditorProps } from './types';
 import { renderHtml } from './utils/utils';
 import { BTNTYPE, InlineBtn, left, right } from './utils/var';
+import './style/main.css';
+
+export function getEditorConfig(): IEditorProps {
+	return {
+		editorStyle: {
+			width: '1200px',
+			height: '600px',
+		},
+		leftButtons: [
+			BTNTYPE.QUOTE,
+			BTNTYPE.H1,
+			BTNTYPE.H2,
+			BTNTYPE.H3,
+			BTNTYPE.BOLD,
+			BTNTYPE.ITALIC,
+			BTNTYPE.DELETE,
+			BTNTYPE.UNDERLINE,
+			BTNTYPE.LINK,
+			BTNTYPE.INLINECODE,
+			BTNTYPE.CODEBLOCK,
+			BTNTYPE.NEWLINE,
+			BTNTYPE.ORDEREDLIST,
+			BTNTYPE.UNORDERLIST,
+			BTNTYPE.IMAGE,
+			BTNTYPE.TABLE,
+		],
+		editorMode: 'sync',
+		markdownClass: 'prose prose-a:text-blue-400 hover:prose-a:opacity-60',
+		previewClass: 'prose prose-a:text-blue-400 hover:prose-a:opacity-60',
+		contentMD: '',
+		contentHTML: '',
+		tableRow: 4,
+		tableCol: 6,
+	};
+}
 
 export default function Editor(props: {
 	editorProps: IEditorProps;
@@ -408,7 +443,7 @@ export default function Editor(props: {
 /**
  * 导出接口
  */
-export let getMDVal: Function;
-export let getHTMLVal: Function;
-export let use: Function;
-export let unuse: Function;
+export let getMDVal: () => string;
+export let getHTMLVal: () => string;
+export let use: (plugin: BTNTYPE | BTNTYPE[]) => void;
+export let unuse: (plugin: BTNTYPE | BTNTYPE[]) => void;

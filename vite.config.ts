@@ -11,7 +11,7 @@ export default defineConfig({
 	plugins: [requireTransform({}), react()],
 	build: {
 		lib: {
-			entry: path.resolve(__dirname, 'src/index.ts'),
+			entry: path.resolve(__dirname, 'src/editor.tsx'),
 			name: 'react-markdown-editor',
 			fileName: (format) => `react-markdown-editor.${format}.js`,
 		},
