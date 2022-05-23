@@ -371,11 +371,23 @@ export default function Editor(props: {
 			};
 		});
 	};
-	use = function (plugin: BTNTYPE) {
+	use = function (plugin: BTNTYPE | BTNTYPE[]) {
+		let arr: BTNTYPE[] = [];
+		if (Array.isArray(plugin)) {
+			for (const p of plugin) {
+				if (editorState.leftButtons?.indexOf(p) == -1) {
+					arr.push(p);
+				}
+			}
+		} else {
+			if (editorState.leftButtons?.indexOf(plugin) == -1) {
+				arr.push(plugin);
+			}
+		}
 		setEditorState((pre) => {
 			return {
 				...pre,
-				leftButtons: [...(pre.leftButtons || []), plugin],
+				leftButtons: [...(pre.leftButtons || []), ...arr],
 			};
 		});
 	};

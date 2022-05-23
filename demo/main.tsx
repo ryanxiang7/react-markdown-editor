@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Editor, { BTNTYPE } from '@ryanxiang/react-markdown-editor';
+import Editor, { BTNTYPE, getMDVal, getHTMLVal, use, unuse } from '@ryanxiang/react-markdown-editor';
 import './index.css';
 import '@ryanxiang/react-markdown-editor/dist/style.css';
 
@@ -37,10 +37,28 @@ function App() {
 		tableCol: 6,
 		imageUrl: 'http://localhost:3001/upload/sayHello',
 	};
+
+	function getMarkdown() {
+		console.log(getMDVal());
+	}
+	function getHTML() {
+		console.log(getHTMLVal());
+	}
+	function unuseBold() {
+		console.log(unuse('bold'));
+	}
+	function useBold() {
+		console.log(use('bold'));
+	}
+
 	return (
 		<div className='w-screen h-screen flex flex-col justify-center'>
 			<div className='h-16 flex justify-center items-center'>
 				<h1 className='font-bold text-6xl'>Editor</h1>
+				<button onClick={getMarkdown}>getMarkdown</button>
+				<button onClick={getHTML}>getHTML</button>
+				<button onClick={useBold}>useBold</button>
+				<button onClick={unuseBold}>unuseBold</button>
 			</div>
 			<div className='w-full flex-1 box-border'>
 				<Editor

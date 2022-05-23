@@ -1,5 +1,8 @@
 module.exports = {
 	mdoe: 'jit',
+	corePlugins: {
+		preflight: false,
+	},
 	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './demo/**/*.{vue,js,ts,jsx,tsx}'],
 	safelist: [
 		'bg-quote',
