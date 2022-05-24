@@ -34,7 +34,7 @@ import '@ryanxiang/react-markdown-editor/dist/style.css';
 
 ```
 
-![image]('/../markdowneditor.png')
+![image]('https://github.com/ryanxiang7/react-markdown-editor/blob/master/markdowneditor.png')
 
 # Props
 
