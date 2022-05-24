@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 import requireTransform from 'vite-plugin-require-transform';
 const path = require('path');
 export default defineConfig({
-	// root: './demo',
 	css: {
 		postcss: {
 			plugins: [require('postcss-import'), require('tailwindcss'), require('autoprefixer')],
