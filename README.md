@@ -32,7 +32,6 @@ import '@ryanxiang/react-markdown-editor/dist/style.css';
   <Editor editorProps={getEditorConfig()} />
 ...
 
-
 ```
 
 # Props
