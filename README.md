@@ -34,6 +34,8 @@ import '@ryanxiang/react-markdown-editor/dist/style.css';
 
 ```
 
+![image]('/../markdowneditor.png')
+
 # Props
 
 **Editor Props**
