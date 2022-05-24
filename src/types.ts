@@ -47,15 +47,8 @@ export interface IEditorProps {
 	 * editor mode
 	 */
 	editorMode: string;
-	/**
-	 * content Md
-	 */
-	contentMD: string;
 
-	/**
-	 * content html
-	 */
-	contentHTML: string;
+	placeHolder?: string;
 
 	/**
 	 * toolbar buttons
@@ -79,6 +72,16 @@ export interface IEditorProps {
 }
 
 export type EditorProps = {
+	/**
+	 * content Md
+	 */
+	contentMD: string;
+
+	/**
+	 * content html
+	 */
+	contentHTML: string;
+
 	rightButtons: BTNTYPE[];
 	styleCache: IEditorStyle;
 	/**

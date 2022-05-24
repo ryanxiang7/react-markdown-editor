@@ -36,8 +36,7 @@ export function getEditorConfig(): IEditorProps {
 		editorMode: 'sync',
 		markdownClass: 'prose prose-a:text-blue-400 hover:prose-a:opacity-60',
 		previewClass: 'prose prose-a:text-blue-400 hover:prose-a:opacity-60',
-		contentMD: '',
-		contentHTML: '',
+		placeHolder: 'Write your markdown here...',
 		tableRow: 4,
 		tableCol: 6,
 	};
@@ -58,8 +57,9 @@ export default function Editor(props: {
 		leftButtons: editorProps.leftButtons || [...left],
 		rightButtons: [...right],
 		editorMode: editorProps.editorMode || 'sync',
-		contentMD: editorProps.contentMD || '',
-		contentHTML: editorProps.contentHTML || '',
+		placeHolder: editorProps.placeHolder || '',
+		contentMD: '',
+		contentHTML: '',
 		imageUrl: editorProps.imageUrl || undefined,
 		tableRow: editorProps.tableRow || 4,
 		tableCol: editorProps.tableCol || 6,
@@ -335,6 +335,7 @@ export default function Editor(props: {
 		let markdown = (
 			<textarea
 				ref={textArea}
+				placeholder={editorState.placeHolder}
 				className={`max-w-none resize-none box-border block border-none bg-white outline-none antialiased flex-1 h-full min-h-[150px] rounded-bl-lg rounded-br-lg p-2 ${editorProps.markdownClass}`}
 				onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
 					handleChange(e);
